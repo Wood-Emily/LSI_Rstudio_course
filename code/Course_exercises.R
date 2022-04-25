@@ -203,6 +203,7 @@ img3 <- readPNG("pictures/Kei_NOS_data.png")
 img4 <- readPNG("pictures/Tom_filo_data.png")
 img5 <- readPNG("pictures/MC3cover-200um.png")
 
+
 ### convert to image panel and add text labels with cowplot::draw_image and draw_label
 
 panelA <- cowplot::ggdraw() + cowplot::draw_image(img1, scale = 1) + 
@@ -263,4 +264,4 @@ Figure1 <- panelA + panelB + panelC + panelD + panelE +
   ggplot2::theme(plot.tag = element_text(size = 12, face='bold'))
 
 ggsave("figures/Figure1_layout2.png", limitsize = FALSE, 
-       units = c("px"), Figure1, width = 3200, height = 1600, bg = "white")
+       units = c("px"), Figure1, width = 4000, height = 1600, bg = "white")
